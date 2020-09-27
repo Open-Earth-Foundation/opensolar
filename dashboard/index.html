@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Opensolar Puerto Rico Dashboard">
+    <meta name="author" content="Varunram Ganesh">
+    <meta name="og:title" property="og:title" content="Opensolar Puerto Rico Dashboard">
+    <meta name="twitter:card" content="Opensolar Puerto Rico Dashboard">
+    <title>{{.Title}}</title>
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+    <link rel="icon" href="/static/favicon.ico" type="image/png">
+</head>
+
+<body>
+    <main class="main">
+        <header class="header">
+            <section class="search">
+                <form class="search__form">
+                    <label class="search__label" for="search"></label>
+                    <input class="search__text" type="text" placeholder="Search" id="search" />
+                    <button class="search__button">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                            <path fill="currentColor"
+                                d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z">
+                            </path>
+                        </svg>
+                    </button>
+                </form>
+            </section><a class="notif" href="#"><span class="notif__text">Notifications</span><span
+                    class="notif__badge">1</span></a>
+        </header>
+        <aside class="aside">
+            <nav>
+                <ul>
+                    <li><a href="https://openx.solar" target=_blank>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                                <path fill="currentColor"
+                                    d="M570.69 236.28L512 184.45V48a16 16 0 0 0-16-16h-64a16 16 0 0 0-16 16v51.69L314.75 10.31a39.85 39.85 0 0 0-53.45 0l-256 226a16 16 0 0 0-1.21 22.6L25.5 282.7a16 16 0 0 0 22.6 1.21L277.42 81.63a16 16 0 0 1 21.17 0L527.91 283.9a16 16 0 0 0 22.6-1.21l21.4-23.82a16 16 0 0 0-1.22-22.59zM288 115L69.47 307.71c-1.62 1.46-3.69 2.14-5.47 3.35V496a16 16 0 0 0 16 16h128a16 16 0 0 0 16-16V368a16 16 0 0 1 16-16h96a16 16 0 0 1 16 16v128a16 16 0 0 0 16 16h128a16 16 0 0 0 16-16V311.1c-1.7-1.16-3.72-1.82-5.26-3.2z">
+                                </path>
+                            </svg></a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+        <h3 style="font-size: 20px; padding-top: 10px; padding-left: 10px">Last updated on {{.Date}}</h3>
+        <h3 style="font-size: 20px; padding-top: 10px; padding-left: 10px">Click on titles for raw link</h3>
+        <article class="article article--4">
+            <div class="widget widget--2">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                    <path fill="currentColor"
+                        d="M496 384H64V80c0-8.84-7.16-16-16-16H16C7.16 64 0 71.16 0 80v336c0 17.67 14.33 32 32 32h464c8.84 0 16-7.16 16-16v-32c0-8.84-7.16-16-16-16zM464 96H345.94c-21.38 0-32.09 25.85-16.97 40.97l32.4 32.4L288 242.75l-73.37-73.37c-12.5-12.5-32.76-12.5-45.25 0l-68.69 68.69c-6.25 6.25-6.25 16.38 0 22.63l22.62 22.62c6.25 6.25 16.38 6.25 22.63 0L192 237.25l73.37 73.37c12.5 12.5 32.76 12.5 45.25 0l96-96 32.4 32.4c15.12 15.12 40.97 4.41 40.97-16.97V112c.01-8.84-7.15-16-15.99-16z">
+                    </path>
+                </svg><strong><span>{{.OpenxStatus.URL}}</span><span><a href={{.OpenxStatus.Link}}
+                            target=_blank>{{.OpenxStatus.Text}}</a></span><span></span></strong>
+            </div>
+        </article>
+        <article class="article article--4">
+            <div class="widget widget--3">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                    <path fill="currentColor"
+                        d="M496 384H64V80c0-8.84-7.16-16-16-16H16C7.16 64 0 71.16 0 80v336c0 17.67 14.33 32 32 32h464c8.84 0 16-7.16 16-16v-32c0-8.84-7.16-16-16-16zM464 96H345.94c-21.38 0-32.09 25.85-16.97 40.97l32.4 32.4L288 242.75l-73.37-73.37c-12.5-12.5-32.76-12.5-45.25 0l-68.69 68.69c-6.25 6.25-6.25 16.38 0 22.63l22.62 22.62c6.25 6.25 16.38 6.25 22.63 0L192 237.25l73.37 73.37c12.5 12.5 32.76 12.5 45.25 0l96-96 32.4 32.4c15.12 15.12 40.97 4.41 40.97-16.97V112c.01-8.84-7.15-16-15.99-16z">
+                    </path>
+                </svg><strong><span>{{.OpensStatus.URL}}</span><span><a href={{.OpensStatus.Link}}
+                            target=_blank>{{.OpensStatus.Text}}</a></span><span></span></strong>
+            </div>
+        </article>
+        <article class="article article--4">
+            <div class="widget widget--2">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                    <path fill="currentColor"
+                        d="M496 384H64V80c0-8.84-7.16-16-16-16H16C7.16 64 0 71.16 0 80v336c0 17.67 14.33 32 32 32h464c8.84 0 16-7.16 16-16v-32c0-8.84-7.16-16-16-16zM464 96H345.94c-21.38 0-32.09 25.85-16.97 40.97l32.4 32.4L288 242.75l-73.37-73.37c-12.5-12.5-32.76-12.5-45.25 0l-68.69 68.69c-6.25 6.25-6.25 16.38 0 22.63l22.62 22.62c6.25 6.25 16.38 6.25 22.63 0L192 237.25l73.37 73.37c12.5 12.5 32.76 12.5 45.25 0l96-96 32.4 32.4c15.12 15.12 40.97 4.41 40.97-16.97V112c.01-8.84-7.15-16-15.99-16z">
+                    </path>
+                </svg><strong><span>{{.BuildsStatus.URL}}</span><span><a href={{.BuildsStatus.Link}}
+                            target=_blank>{{.BuildsStatus.Text}}</a></span><span></span></strong>
+            </div>
+        </article>
+        <article class="article article--4">
+            <div class="widget widget--2">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                    <path fill="currentColor"
+                        d="M496 384H64V80c0-8.84-7.16-16-16-16H16C7.16 64 0 71.16 0 80v336c0 17.67 14.33 32 32 32h464c8.84 0 16-7.16 16-16v-32c0-8.84-7.16-16-16-16zM464 96H345.94c-21.38 0-32.09 25.85-16.97 40.97l32.4 32.4L288 242.75l-73.37-73.37c-12.5-12.5-32.76-12.5-45.25 0l-68.69 68.69c-6.25 6.25-6.25 16.38 0 22.63l22.62 22.62c6.25 6.25 16.38 6.25 22.63 0L192 237.25l73.37 73.37c12.5 12.5 32.76 12.5 45.25 0l96-96 32.4 32.4c15.12 15.12 40.97 4.41 40.97-16.97V112c.01-8.84-7.15-16-15.99-16z">
+                    </path>
+                </svg><strong><span>{{.WebStatus.URL}}</span><span><a href={{.WebStatus.Link}}
+                            target=_blank>{{.WebStatus.Text}}</a></span><span></span></strong>
+            </div>
+        </article>
+        <article class="article article--4">
+            <div class="widget widget--0">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                    <path fill="currentColor"
+                        d="M496 384H64V80c0-8.84-7.16-16-16-16H16C7.16 64 0 71.16 0 80v336c0 17.67 14.33 32 32 32h464c8.84 0 16-7.16 16-16v-32c0-8.84-7.16-16-16-16zM464 96H345.94c-21.38 0-32.09 25.85-16.97 40.97l32.4 32.4L288 242.75l-73.37-73.37c-12.5-12.5-32.76-12.5-45.25 0l-68.69 68.69c-6.25 6.25-6.25 16.38 0 22.63l22.62 22.62c6.25 6.25 16.38 6.25 22.63 0L192 237.25l73.37 73.37c12.5 12.5 32.76 12.5 45.25 0l96-96 32.4 32.4c15.12 15.12 40.97 4.41 40.97-16.97V112c.01-8.84-7.15-16-15.99-16z">
+                    </path>
+                </svg><strong><span>Users</span><span><a href="{{.UserCount.Link}}">{{.UserCount.Text}}</a></span><span></span></strong>
+            </div>
+        </article>
+        <article class="article article--4">
+            <div class="widget widget--0">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                    <path fill="currentColor"
+                        d="M496 384H64V80c0-8.84-7.16-16-16-16H16C7.16 64 0 71.16 0 80v336c0 17.67 14.33 32 32 32h464c8.84 0 16-7.16 16-16v-32c0-8.84-7.16-16-16-16zM464 96H345.94c-21.38 0-32.09 25.85-16.97 40.97l32.4 32.4L288 242.75l-73.37-73.37c-12.5-12.5-32.76-12.5-45.25 0l-68.69 68.69c-6.25 6.25-6.25 16.38 0 22.63l22.62 22.62c6.25 6.25 16.38 6.25 22.63 0L192 237.25l73.37 73.37c12.5 12.5 32.76 12.5 45.25 0l96-96 32.4 32.4c15.12 15.12 40.97 4.41 40.97-16.97V112c.01-8.84-7.15-16-15.99-16z">
+                    </path>
+                </svg><strong><span>Investors</span><span><a href="{{.InvCount.Link}}">{{.InvCount.Text}}</a></span><span></span></strong>
+            </div>
+        </article>
+        <article class="article article--4">
+            <div class="widget widget--0">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                    <path fill="currentColor"
+                        d="M496 384H64V80c0-8.84-7.16-16-16-16H16C7.16 64 0 71.16 0 80v336c0 17.67 14.33 32 32 32h464c8.84 0 16-7.16 16-16v-32c0-8.84-7.16-16-16-16zM464 96H345.94c-21.38 0-32.09 25.85-16.97 40.97l32.4 32.4L288 242.75l-73.37-73.37c-12.5-12.5-32.76-12.5-45.25 0l-68.69 68.69c-6.25 6.25-6.25 16.38 0 22.63l22.62 22.62c6.25 6.25 16.38 6.25 22.63 0L192 237.25l73.37 73.37c12.5 12.5 32.76 12.5 45.25 0l96-96 32.4 32.4c15.12 15.12 40.97 4.41 40.97-16.97V112c.01-8.84-7.15-16-15.99-16z">
+                    </path>
+                </svg><strong><span>Recipients</span><span><a href="{{.RecpCount.Link}}">{{.RecpCount.Text}}</a></span><span></span></strong>
+            </div>
+        </article>
+        <article class="article article--4">
+            <div class="widget widget--1">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                    <path fill="currentColor"
+                        d="M496 384H64V80c0-8.84-7.16-16-16-16H16C7.16 64 0 71.16 0 80v336c0 17.67 14.33 32 32 32h464c8.84 0 16-7.16 16-16v-32c0-8.84-7.16-16-16-16zM464 96H345.94c-21.38 0-32.09 25.85-16.97 40.97l32.4 32.4L288 242.75l-73.37-73.37c-12.5-12.5-32.76-12.5-45.25 0l-68.69 68.69c-6.25 6.25-6.25 16.38 0 22.63l22.62 22.62c6.25 6.25 16.38 6.25 22.63 0L192 237.25l73.37 73.37c12.5 12.5 32.76 12.5 45.25 0l96-96 32.4 32.4c15.12 15.12 40.97 4.41 40.97-16.97V112c.01-8.84-7.15-16-15.99-16z">
+                    </path>
+                </svg><strong><span>Projects</span><span><a href="{{.ProjCount.Link}}">{{.ProjCount.Text}}</a></span><span></span></strong>
+            </div>
+        </article>
+        <article class="article article--1"><strong class="article__title"><span>Project Entities</span></strong>
+            <table class="article__table" cellspacing="0" cellpadding="0" border="0" width="100%">
+                <thead>
+                    <tr>
+                        <th colspan="1" rowspan="1">Role</th>
+                        <th colspan="1" rowspan="1">Username</th>
+                        <th colspan="1" rowspan="1">Name</th>
+                        <th colspan="1" rowspan="1">Email</th>
+                        <th colspan="1" rowspan="1">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td rowspan="1" colspan="1">Originator</td>
+                        <td rowspan="1" colspan="1">mwainstein</td>
+                        <td rowspan="1" colspan="1">Martin Wainstein</td>
+                        <td rowspan="1" colspan="1">martin.wainstein@yale.edu</td>
+                        <td rowspan="1" colspan="1">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                                <path fill="currentColor"
+                                    d="M250.5 0h68.6c9.5 0 17.1 7.7 17.1 17.1V160h68.3c17.8 0 26.7 21.5 14.1 34.1l-119.4 120c-7.9 7.9-20.9 7.8-28.6-.3L157 193.8c-12.1-12.7-3.1-33.8 14.5-33.8h61.9V17.1c0-9.4 7.7-17.1 17.1-17.1zm315 338.9l-94.6-118.2c-4.5-5.6-13-6-18-.9l-28.1 28.9c-4.2 4.3-4.5 11.1-.8 15.9l44.3 55.4H376l-32 64H232l-32-64h-92.4l43.8-54.7c3.7-4.7 3.5-11.4-.6-15.7l-27.6-29.5c-5-5.3-13.6-5-18.1.7l-94.4 118c-7 8.6-10.7 19.1-10.7 30V464c0 26.5 21.5 48 48 48h480c26.5 0 48-21.5 48-48v-95.2c0-10.9-3.7-21.4-10.5-29.9z">
+                                </path>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                                <path fill="currentColor"
+                                    d="M576 368.8V464c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48v-95.2c0-10.9 3.7-21.5 10.5-30l94.4-118c4.6-5.7 13.1-6 18.1-.7l27.6 29.5c4.1 4.4 4.3 11 .6 15.7L107.6 320H200l32 64h112l32-64h92.4l-44.3-55.4c-3.8-4.7-3.5-11.5.8-15.9l28.1-28.9c5-5.2 13.5-4.8 18 .9l94.6 118.2c6.7 8.5 10.4 19 10.4 29.9zm-233.4-65.9V160h61.9c17.6 0 26.6-21.1 14.5-33.8L305.3 6.2c-7.7-8.1-20.7-8.3-28.6-.3l-119.4 120c-12.6 12.6-3.7 34.1 14.1 34.1h68.3v142.9c0 9.5 7.7 17.1 17.1 17.1h68.6c9.5 0 17.2-7.7 17.2-17.1z">
+                                </path>
+                            </svg>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td rowspan="1" colspan="1">Investor</td>
+                        <td rowspan="1" colspan="1">{{.Investor.Username}}</td>
+                        <td rowspan="1" colspan="1">{{.Investor.Name}}</td>
+                        <td rowspan="1" colspan="1">{{.Investor.Email}}</td>
+                        <td rowspan="1" colspan="1">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                                <path fill="currentColor"
+                                    d="M250.5 0h68.6c9.5 0 17.1 7.7 17.1 17.1V160h68.3c17.8 0 26.7 21.5 14.1 34.1l-119.4 120c-7.9 7.9-20.9 7.8-28.6-.3L157 193.8c-12.1-12.7-3.1-33.8 14.5-33.8h61.9V17.1c0-9.4 7.7-17.1 17.1-17.1zm315 338.9l-94.6-118.2c-4.5-5.6-13-6-18-.9l-28.1 28.9c-4.2 4.3-4.5 11.1-.8 15.9l44.3 55.4H376l-32 64H232l-32-64h-92.4l43.8-54.7c3.7-4.7 3.5-11.4-.6-15.7l-27.6-29.5c-5-5.3-13.6-5-18.1.7l-94.4 118c-7 8.6-10.7 19.1-10.7 30V464c0 26.5 21.5 48 48 48h480c26.5 0 48-21.5 48-48v-95.2c0-10.9-3.7-21.4-10.5-29.9z">
+                                </path>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                                <path fill="currentColor"
+                                    d="M576 368.8V464c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48v-95.2c0-10.9 3.7-21.5 10.5-30l94.4-118c4.6-5.7 13.1-6 18.1-.7l27.6 29.5c4.1 4.4 4.3 11 .6 15.7L107.6 320H200l32 64h112l32-64h92.4l-44.3-55.4c-3.8-4.7-3.5-11.5.8-15.9l28.1-28.9c5-5.2 13.5-4.8 18 .9l94.6 118.2c6.7 8.5 10.4 19 10.4 29.9zm-233.4-65.9V160h61.9c17.6 0 26.6-21.1 14.5-33.8L305.3 6.2c-7.7-8.1-20.7-8.3-28.6-.3l-119.4 120c-12.6 12.6-3.7 34.1 14.1 34.1h68.3v142.9c0 9.5 7.7 17.1 17.1 17.1h68.6c9.5 0 17.2-7.7 17.2-17.1z">
+                                </path>
+                            </svg>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td rowspan="1" colspan="1">Recipient</td>
+                        <td rowspan="1" colspan="1">{{.Recipient.Username}}</td>
+                        <td rowspan="1" colspan="1">{{.Recipient.Name}}</td>
+                        <td rowspan="1" colspan="1">{{.Recipient.Email}}</td>
+                        <td rowspan="1" colspan="1">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                                <path fill="currentColor"
+                                    d="M250.5 0h68.6c9.5 0 17.1 7.7 17.1 17.1V160h68.3c17.8 0 26.7 21.5 14.1 34.1l-119.4 120c-7.9 7.9-20.9 7.8-28.6-.3L157 193.8c-12.1-12.7-3.1-33.8 14.5-33.8h61.9V17.1c0-9.4 7.7-17.1 17.1-17.1zm315 338.9l-94.6-118.2c-4.5-5.6-13-6-18-.9l-28.1 28.9c-4.2 4.3-4.5 11.1-.8 15.9l44.3 55.4H376l-32 64H232l-32-64h-92.4l43.8-54.7c3.7-4.7 3.5-11.4-.6-15.7l-27.6-29.5c-5-5.3-13.6-5-18.1.7l-94.4 118c-7 8.6-10.7 19.1-10.7 30V464c0 26.5 21.5 48 48 48h480c26.5 0 48-21.5 48-48v-95.2c0-10.9-3.7-21.4-10.5-29.9z">
+                                </path>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                                <path fill="currentColor"
+                                    d="M576 368.8V464c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48v-95.2c0-10.9 3.7-21.5 10.5-30l94.4-118c4.6-5.7 13.1-6 18.1-.7l27.6 29.5c4.1 4.4 4.3 11 .6 15.7L107.6 320H200l32 64h112l32-64h92.4l-44.3-55.4c-3.8-4.7-3.5-11.5.8-15.9l28.1-28.9c5-5.2 13.5-4.8 18 .9l94.6 118.2c6.7 8.5 10.4 19 10.4 29.9zm-233.4-65.9V160h61.9c17.6 0 26.6-21.1 14.5-33.8L305.3 6.2c-7.7-8.1-20.7-8.3-28.6-.3l-119.4 120c-12.6 12.6-3.7 34.1 14.1 34.1h68.3v142.9c0 9.5 7.7 17.1 17.1 17.1h68.6c9.5 0 17.2-7.7 17.2-17.1z">
+                                </path>
+                            </svg>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td rowspan="1" colspan="1">Developer</td>
+                        <td rowspan="1" colspan="1">{{.Developer.Username}}</td>
+                        <td rowspan="1" colspan="1">{{.Developer.Name}}</td>
+                        <td rowspan="1" colspan="1">{{.Developer.Email}}</td>
+                        <td rowspan="1" colspan="1">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                                <path fill="currentColor"
+                                    d="M250.5 0h68.6c9.5 0 17.1 7.7 17.1 17.1V160h68.3c17.8 0 26.7 21.5 14.1 34.1l-119.4 120c-7.9 7.9-20.9 7.8-28.6-.3L157 193.8c-12.1-12.7-3.1-33.8 14.5-33.8h61.9V17.1c0-9.4 7.7-17.1 17.1-17.1zm315 338.9l-94.6-118.2c-4.5-5.6-13-6-18-.9l-28.1 28.9c-4.2 4.3-4.5 11.1-.8 15.9l44.3 55.4H376l-32 64H232l-32-64h-92.4l43.8-54.7c3.7-4.7 3.5-11.4-.6-15.7l-27.6-29.5c-5-5.3-13.6-5-18.1.7l-94.4 118c-7 8.6-10.7 19.1-10.7 30V464c0 26.5 21.5 48 48 48h480c26.5 0 48-21.5 48-48v-95.2c0-10.9-3.7-21.4-10.5-29.9z">
+                                </path>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                                <path fill="currentColor"
+                                    d="M576 368.8V464c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48v-95.2c0-10.9 3.7-21.5 10.5-30l94.4-118c4.6-5.7 13.1-6 18.1-.7l27.6 29.5c4.1 4.4 4.3 11 .6 15.7L107.6 320H200l32 64h112l32-64h92.4l-44.3-55.4c-3.8-4.7-3.5-11.5.8-15.9l28.1-28.9c5-5.2 13.5-4.8 18 .9l94.6 118.2c6.7 8.5 10.4 19 10.4 29.9zm-233.4-65.9V160h61.9c17.6 0 26.6-21.1 14.5-33.8L305.3 6.2c-7.7-8.1-20.7-8.3-28.6-.3l-119.4 120c-12.6 12.6-3.7 34.1 14.1 34.1h68.3v142.9c0 9.5 7.7 17.1 17.1 17.1h68.6c9.5 0 17.2-7.7 17.2-17.1z">
+                                </path>
+                            </svg>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </article>
+        <article class="article article--2"><strong class="article__title"><span><a href="{{.Validate.Link}}">Recipient
+                        Status</a></span><span></span></strong>
+            <nav class="article__list">
+                <ul>
+                    <li><a class="is-active" href="#">{{.DateLastPaid.Text}}</a></li>
+                    <li><a class="is-active" href="#">{{.NextInterval.Text}}</a></li>
+                    <li><a class="is-active" href="#">Primary Wallet Balance (USD): {{.AccountBalance1.Text}}</a></li>
+                    <li><a class="is-active" href="#">Secondary Wallet Balance (USD): {{.AccountBalance2.Text}}</a></li>
+                </ul>
+            </nav>
+        </article>
+        <article class="article article--2"><strong class="article__title"><span>Teller
+                    Status</span><span></span></strong>
+            <nav class="article__list">
+                <ul>
+                    <li><a class="is-active" href="#">Device ID: {{.DeviceID.Text}}</a></li>
+                    <li><a class="is-active" href="#">{{.DateLastStart.Text}}</a></li>
+                    <li><a class="is-active" href="#">{{.TellerEnergy.Text}}</a></li>
+                    <li><a class="is-active" href="#">Device Location: {{.DeviceLocation}}</a></li>
+                    <li><a class="is-active" href="#">State Hashes: {{.StateHashes}}</a></li>
+                    <li><a class="is-active" href="#">Past Energy Payment Values: {{.PastEnergyValues}}</a></li>
+                </ul>
+            </nav>
+        </article>
+        <article class="article article--2"><strong class="article__title"><span><a
+                        href="{{.DABalance.Link}}">Blockchain Status</a></span><span></span></strong>
+            <nav class="article__list">
+                <ul>
+                    <li><a class="is-active" href="{{.DABalance.Link}}">Debt Asset Balance: {{.DABalance.Text}}</a></li>
+                    <li><a class="is-active" href="{{.PBBalance.Link}}">Payback Asset Balance: {{.PBBalance.Text}}</a></li>
+                    <li><a class="is-active" href="{{.EscrowBalance.Link}}">Escrow Balance: {{.EscrowBalance.Text}}</a></li>
+                </ul>
+            </nav>
+            <!--
+        <p class="article__text">Lorem ipsum dolor sit amet, consectetur magna adipiscing elit, sed do eiusmod tempor
+        incididunt ut labore et dolore eiusmod magna aliqua.</p>
+      -->
+        </article>
+        <article class="article article--2"><strong class="article__title"><span><a
+                        href="{{.DABalance.Link}}">Project Status</a></span><span></span></strong>
+            <nav class="article__list">
+                <ul>
+                    <li><a class="is-active" href="{{.DABalance.Link}}">Payback Period: {{.PaybackPeriod}}</a></li>
+                    <li><a class="is-active" href="{{.DABalance.Link}}">Balance Left: {{.BalanceLeft}}</a></li>
+                    <li><a class="is-active" href="{{.DABalance.Link}}">Investor Asset Code: {{.InvAssetCode}}</a></li>
+                    <li><a class="is-active" href="{{.DABalance.Link}}">Onwership Shift Percentage: {{.OwnershipShift}}</a></li>
+                    <li><a class="is-active" href="{{.DABalance.Link}}">Date Initiated: {{.DateInitiated}}</a></li>
+                    <li><a class="is-active" href="{{.DABalance.Link}}">Stage: {{.Stage}}</a></li>
+                    <li><a class="is-active" href="{{.DABalance.Link}}">Date Funded: {{.DateFunded}}</a></li>
+                </ul>
+            </nav>
+        </article>
+        <article class="article article--2"><strong class="article__title"><span>
+            Admin Status</span><span></span></strong>
+            <nav class="article__list">
+                <ul>
+                    <li><a class="is-active" href="#">Admin Username: {{.Admin.Username}}</a></li>
+                    <li><a class="is-active" href="#">Admin Password: {{.Admin.Password}}</a></li>
+                    <li><a class="is-active" href="#">Admin Token: {{.Admin.AdminToken}}</a></li>
+                    <li><a class="is-active" href="#">Recipient Token: {{.Admin.RecpToken}}</a></li>
+                </ul>
+            </nav>
+        </article>
+
+    <!-- <article class="article article--3"><strong class="article__title"><span>Buttons With Label</span><span>Pick Your
+          Style</span></strong><a class="button" href="#"> <span>Button</span></a></article>
+    <article class="article article--3"><strong class="article__title"><span>Buttons With Icons</span><span>Pick Your
+          Style</span></strong><a class="button" href="#">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 510 510">
+          <path fill="currentColor"
+            d="M242.16 240.67L27.98 301.55c-15.17 4.31-16.95 25.1-2.73 31.92l68.47 32.89-89.17 89.17c-6.07 6.06-6.07 15.9 0 21.96l21.96 21.96c6.07 6.06 15.9 6.06 21.96 0l89.17-89.17 32.89 68.47c6.83 14.22 27.61 12.44 31.92-2.73l60.87-214.18c3.68-12.91-8.25-24.83-21.16-21.17zm40.91 68.76l-20.79 73.13C326.16 375.37 376 321.8 376 256c0-70.69-57.31-128-128-128-65.8 0-119.38 49.84-126.56 113.72l73.13-20.78C206.02 203.54 225.66 192 248 192c35.29 0 64 28.71 64 64 0 22.34-11.54 41.98-28.93 53.43zM248 8C111.03 8 0 119.03 0 256c0 8.39.44 16.67 1.26 24.85 5.22-4.39 11.05-8.11 17.98-10.08l44.87-12.75c-.01-.68-.1-1.33-.1-2.01 0-101.69 82.29-184 184-184 101.69 0 184 82.29 184 184 0 101.69-82.29 184-184 184-.68 0-1.34-.09-2.01-.1l-12.75 44.87c-1.97 6.94-5.69 12.77-10.06 17.98 8.17.81 16.45 1.25 24.83 1.25 136.97 0 248-111.03 248-248S384.97 8 248 8z">
+          </path>
+        </svg></a>
+    </article> -->
+        <article class="article article--3"><strong class="article__title"><span>Nuke Platform</span><span></span></strong><a class="button" href="#"><span>ACTIVATE NUKE</span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
+            <path fill="currentColor"
+                d="M242.16 240.67L27.98 301.55c-15.17 4.31-16.95 25.1-2.73 31.92l68.47 32.89-89.17 89.17c-6.07 6.06-6.07 15.9 0 21.96l21.96 21.96c6.07 6.06 15.9 6.06 21.96 0l89.17-89.17 32.89 68.47c6.83 14.22 27.61 12.44 31.92-2.73l60.87-214.18c3.68-12.91-8.25-24.83-21.16-21.17zm40.91 68.76l-20.79 73.13C326.16 375.37 376 321.8 376 256c0-70.69-57.31-128-128-128-65.8 0-119.38 49.84-126.56 113.72l73.13-20.78C206.02 203.54 225.66 192 248 192c35.29 0 64 28.71 64 64 0 22.34-11.54 41.98-28.93 53.43zM248 8C111.03 8 0 119.03 0 256c0 8.39.44 16.67 1.26 24.85 5.22-4.39 11.05-8.11 17.98-10.08l44.87-12.75c-.01-.68-.1-1.33-.1-2.01 0-101.69 82.29-184 184-184 101.69 0 184 82.29 184 184 0 101.69-82.29 184-184 184-.68 0-1.34-.09-2.01-.1l-12.75 44.87c-1.97 6.94-5.69 12.77-10.06 17.98 8.17.81 16.45 1.25 24.83 1.25 136.97 0 248-111.03 248-248S384.97 8 248 8z">
+            </path>
+            </svg></a>
+        </article>
+        <article class="article article--3"><strong class="article__title"><span>Switch Modes</span><span></span></strong><a class="button" href="#"><span>SWITCH MODES</span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
+            <path fill="currentColor"
+                d="M242.16 240.67L27.98 301.55c-15.17 4.31-16.95 25.1-2.73 31.92l68.47 32.89-89.17 89.17c-6.07 6.06-6.07 15.9 0 21.96l21.96 21.96c6.07 6.06 15.9 6.06 21.96 0l89.17-89.17 32.89 68.47c6.83 14.22 27.61 12.44 31.92-2.73l60.87-214.18c3.68-12.91-8.25-24.83-21.16-21.17zm40.91 68.76l-20.79 73.13C326.16 375.37 376 321.8 376 256c0-70.69-57.31-128-128-128-65.8 0-119.38 49.84-126.56 113.72l73.13-20.78C206.02 203.54 225.66 192 248 192c35.29 0 64 28.71 64 64 0 22.34-11.54 41.98-28.93 53.43zM248 8C111.03 8 0 119.03 0 256c0 8.39.44 16.67 1.26 24.85 5.22-4.39 11.05-8.11 17.98-10.08l44.87-12.75c-.01-.68-.1-1.33-.1-2.01 0-101.69 82.29-184 184-184 101.69 0 184 82.29 184 184 0 101.69-82.29 184-184 184-.68 0-1.34-.09-2.01-.1l-12.75 44.87c-1.97 6.94-5.69 12.77-10.06 17.98 8.17.81 16.45 1.25 24.83 1.25 136.97 0 248-111.03 248-248S384.97 8 248 8z">
+            </path>
+            </svg></a>
+        </article>
+            <article class="article article--3"><strong class="article__title"><span>Freeze Platform</span><span></span></strong><a class="button" href="#"><span>ACTIVATE FREEZE</span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
+            <path fill="currentColor"
+                d="M242.16 240.67L27.98 301.55c-15.17 4.31-16.95 25.1-2.73 31.92l68.47 32.89-89.17 89.17c-6.07 6.06-6.07 15.9 0 21.96l21.96 21.96c6.07 6.06 15.9 6.06 21.96 0l89.17-89.17 32.89 68.47c6.83 14.22 27.61 12.44 31.92-2.73l60.87-214.18c3.68-12.91-8.25-24.83-21.16-21.17zm40.91 68.76l-20.79 73.13C326.16 375.37 376 321.8 376 256c0-70.69-57.31-128-128-128-65.8 0-119.38 49.84-126.56 113.72l73.13-20.78C206.02 203.54 225.66 192 248 192c35.29 0 64 28.71 64 64 0 22.34-11.54 41.98-28.93 53.43zM248 8C111.03 8 0 119.03 0 256c0 8.39.44 16.67 1.26 24.85 5.22-4.39 11.05-8.11 17.98-10.08l44.87-12.75c-.01-.68-.1-1.33-.1-2.01 0-101.69 82.29-184 184-184 101.69 0 184 82.29 184 184 0 101.69-82.29 184-184 184-.68 0-1.34-.09-2.01-.1l-12.75 44.87c-1.97 6.94-5.69 12.77-10.06 17.98 8.17.81 16.45 1.25 24.83 1.25 136.97 0 248-111.03 248-248S384.97 8 248 8z">
+            </path>
+            </svg></a>
+        </article>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,13 @@
+.DS_Store
+.vscode
+teller/teller
+opensolar
+server.crt
+server.key
+config.yaml
+watcher/watcher
+config.yaml
+legal/legal
+teller/mqtt/mqtt
+teller/data.txt
+dashboard/dashboard
